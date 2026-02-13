@@ -66,6 +66,21 @@ After calling the update functions, you can access the following fields:
 
 ---
 
+## Hardware Requirements & Wiring
+
+This driver is optimized for the **Grove IMU 10DOF** module.
+
+### 1. Connectivity
+* **VCC**: Connect to **5V** (The module includes an onboard regulator).
+* **GND**: Connect to common Ground.
+* **I2C Bus**: Connect **SDA** and **SCL** to your microcontroller's I2C pins.
+
+### 2. Device Address
+* **MPU-9250 Address**: `0x68` (Default for this driver).
+* **AK8963 Address**: `0x0C` (Internal magnetometer).
+
+---
+
 ## Hardware Integration (STM32 Example)
 
 To use this driver, you must provide three "wrapper" functions that link the agnostic logic to your specific hardware (e.g., STM32 HAL).
